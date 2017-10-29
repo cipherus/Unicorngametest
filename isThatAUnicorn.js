@@ -11,7 +11,7 @@ $(document).ready(function() {
               
                   $("#rewardarea").hide();
                   $("#failarea").hide();
-                  if(window.DeviceOrientationEvent) {
+                  /*if(window.DeviceOrientationEvent) {
                                      window.addEventListener('deviceorientation', function(event) {
                                                 alpha = Math.floor(event.alpha); //Round down to integer
                                                     }, false );
@@ -51,5 +51,6 @@ $(document).ready(function() {
                                     
                                     
                     });
+                    */
                     
 });
