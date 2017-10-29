@@ -14,41 +14,43 @@ $(document).ready(function() {
                   
                   
                   $("#button").click(function() {
-                                   /*
                                    if(window.DeviceOrientationEvent) {
                                      window.addEventListener('deviceorientation', function(event) {
                                                 alpha = Math.floor(event.alpha); //Round down to integer
                                                     }
-                                    }
-*/
-                                    if (orientationValue==1 && (360 - accuracy < alpha || alpha < accuracy) ||
+
+                                      if (orientationValue==1 && (360 - accuracy < alpha || alpha < accuracy) ||
                                        ((orientations[orientationValue] - accuracy) < alpha && alpha < (orientations[orientationValue] + accuracy) ) ) { //special rule for north because of overflow
                                       
-                                      winCounter++;
-                                      
-                                      $("#mainarea").hide();
-                                      $("#unicornreward").show();
+                                       winCounter++;
+                                       $("#mainarea").hide();
+                                       $("#unicornreward").show();
+
+                                      }
+                                      else {
+                                        winCounter = 0;
+                                       $("#mainarea").hide();
+                                       $("#failarea").show();
+                                      }
 
 
-                                    }
-
-                                    else {
-                                      winCounter = 0;
-                                      $("#mainarea").hide();
-                                      $("#failarea").show();
-                                      
-                                    }
-
-
-                                    $("#winCounter").text(winCounter); //Set wincounter
+                                      $("#winCounter").text(winCounter); //Set wincounter
                               
-                                    orientationValue = Math.floor((Math.random() * 8)); //random new orientation array position 0-8
-                                    $("#direction").text(orientationStrings[orientationValue]); //Set direction text    
-                                    
-                                    
-                                    $("#rewardarea").hide();
-                                    $("#failarea").hide();
-                                    $("#mainarea").show();
+                                      orientationValue = Math.floor((Math.random() * 8)); //random new orientation array position 0-8
+                                      $("#direction").text(orientationStrings[orientationValue]); //Set direction text    
+                                        
+                                        
+                                      $("#rewardarea").hide();
+                                      $("#failarea").hide();
+                                      $("#mainarea").show();
+
+                                    } 
+
+                                 else {
+                                  
+                                  $("#mainarea").hide();
+
+                                  }
                                     
                                     
                     });
