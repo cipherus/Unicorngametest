@@ -9,8 +9,9 @@ $(document).ready(function() {
                   var alpha = 0;
 
               
-                  $("#rewardarea").hide();
-                  $("#failarea").hide();
+                 
+                  document.getElementById('rewardarea').style.display = "none";
+                  document.getElementById('failarea').style.display = "block";
                   /*if(window.DeviceOrientationEvent) {
                                      window.addEventListener('deviceorientation', function(event) {
                                                 alpha = Math.floor(event.alpha); //Round down to integer
