@@ -17,7 +17,7 @@ $(document).ready(function() {
                
               if(window.DeviceOrientationEvent) {
                                      window.addEventListener('deviceorientation', function(event) {
-                                                alpha = Math.floor(event.alpha); //Round down to integer
+                                                alpha = event.alpha; //Round down to integer
                                                     }, false);
                                    }
                   
@@ -50,7 +50,8 @@ $(document).ready(function() {
                                       window.setTimeout(function() {
                                       $("#winCounter").text(winCounter); //Set wincounter
                               
-                                      orientationValue = Math.floor((Math.random() * 8)); //random new orientation array position 0-8
+                                    //  orientationValue = Math.floor((Math.random() * 8)); //random new orientation array position 0-8
+                                        orientationValue = 1;
                                       $("#direction").text(orientationStrings[orientationValue]); //Set direction text    
                                         
                                         
