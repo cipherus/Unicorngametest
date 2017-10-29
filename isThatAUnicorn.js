@@ -11,13 +11,13 @@ $(document).ready(function() {
               
                   $("#rewardarea").hide();
                   $("#failarea").hide();
-                  
-                  
-                  $("#button").click(function() {
-                                   if(window.DeviceOrientationEvent) {
+                  if(window.DeviceOrientationEvent) {
                                      window.addEventListener('deviceorientation', function(event) {
                                                 alpha = Math.floor(event.alpha); //Round down to integer
                                                     }, false );
+                  
+                  $("#button").click(function() {
+
 
                                       if (orientationValue==1 && (360 - accuracy < alpha || alpha < accuracy) ||
                                        ((orientations[orientationValue] - accuracy) < alpha && alpha < (orientations[orientationValue] + accuracy) ) ) { //special rule for north because of overflow
@@ -46,11 +46,7 @@ $(document).ready(function() {
                                       }, 2000);
                                     } 
 
-                                 else {
-                                  
-                                  $("#mainarea").hide();
-
-                                  }
+                                 
                                     
                                     
                     });
