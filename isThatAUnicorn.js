@@ -11,7 +11,7 @@ $(document).ready(function() {
               
                  
                   document.getElementById('rewardarea').style.visibility = "hidden";
-                  document.getElementById('failarea').style.display = "visible";
+                  document.getElementById('failarea').style.visibility = "visible";
                   /*if(window.DeviceOrientationEvent) {
                                      window.addEventListener('deviceorientation', function(event) {
                                                 alpha = Math.floor(event.alpha); //Round down to integer
