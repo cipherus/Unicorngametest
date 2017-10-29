@@ -15,6 +15,7 @@ $(document).ready(function() {
                                      window.addEventListener('deviceorientation', function(event) {
                                                 alpha = Math.floor(event.alpha); //Round down to integer
                                                     }, false );
+                  }
                   
                   $("#button").click(function() {
 
@@ -44,7 +45,7 @@ $(document).ready(function() {
                                       $("#mainarea").show();
 
                                       }, 2000);
-                                    } 
+                                    
 
                                  
                                     
