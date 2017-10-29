@@ -24,7 +24,7 @@ $(document).ready(function() {
                                       
                                        winCounter++;
                                        $("#mainarea").hide();
-                                       $("#unicornreward").show();
+                                       $("#rewardarea").show();
 
                                       }
                                       else {
@@ -32,8 +32,7 @@ $(document).ready(function() {
                                        $("#mainarea").hide();
                                        $("#failarea").show();
                                       }
-
-
+                                      window.setTimeout(function() {
                                       $("#winCounter").text(winCounter); //Set wincounter
                               
                                       orientationValue = Math.floor((Math.random() * 8)); //random new orientation array position 0-8
@@ -44,6 +43,7 @@ $(document).ready(function() {
                                       $("#failarea").hide();
                                       $("#mainarea").show();
 
+                                      }, 2000);
                                     } 
 
                                  else {
